@@ -1,0 +1,591 @@
+/* Definição das fontes */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Configuração de rolagem suave para o HTML */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Configurações gerais do body */
+body {
+    background-color: #1e1f22;
+}
+
+/* Início do header */
+.primary-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    transition: background-color 0.5s;
+}
+
+/* Alinhamento da navbar */
+.container {
+    max-width: 120rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+.navbar {
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    transition: height 0.25s;
+}
+
+/* Fim do alinhamento da navbar */
+
+.logo {
+    height: 50px;
+}
+
+/* Lista da navbar e efeito nos links */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin-left: auto;
+    margin-right: 5rem;
+}
+
+.nav-link:hover {
+    transition: color 0.25s;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #313131;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    transition: background-color 0.25s;
+}
+
+.button:hover {
+    background-color: #ffffff;
+}
+
+/* Fim da lista da navbar */
+
+/* Efeito de cor do header */
+header.active {
+    background-color: #ffffff;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+}
+
+header.active .navbar {
+    height: 4rem;
+}
+
+header.active .logo,
+header.active .nav-link {
+    color: #313131;
+}
+
+header.active .nav-link:hover {
+    color: #808080;
+}
+
+header.active .button {
+    background-color: #313131;
+    color: #ffffff;
+}
+
+header.active .button:hover {
+    background-color: #151515;
+}
+
+/* Fim do header */
+
+/* 1ª section com imagem e texto */
+.topsection {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.left-box {
+    flex: 1;
+}
+
+.full-width-image {
+    width: 98%;
+}
+/*box da direita onde fica o texto */
+.right-box {
+    max-width: 500px;
+    flex: 1;
+    text-align: left;
+    font-size: 25px;
+    word-break: break-word;
+    color: white;
+}
+
+/* Fim da 1ª section */
+
+/* Box com 4 imagens e texto */
+.bottom-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    padding: 5px;
+    padding: 15px;
+    border-radius: 8px;
+    height: auto;
+    color: white;
+}
+
+.small-image {
+    width: 250px;
+    max-height: 150px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.image-container>div {
+    display: flex;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #5050502a;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.image-container span {
+    font-size: 20px;
+    text-align: center;
+}
+
+.text-container {
+    flex-basis: 100%;
+    word-break: break-word;
+    width: 300px;
+}
+
+.middletext {
+    text-align: center;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+    .bottom-box {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 10px;
+    }
+
+    .image-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-container>div {
+        margin: 5px;
+    }
+}
+
+/* Fim do parágrafo */
+
+/* Tabela de planos */
+.planos {
+    display: flex;
+    flex-direction: row;
+    margin: 2.5rem;
+    padding: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.planos .box {
+    text-align: center;
+    background-color: #d3d3d3a4;
+    margin: 35px;
+    border-radius: 20px;
+    padding: 5px;
+    width: 331px;
+}
+
+.price {
+    font-size: 50px;
+}
+
+.texto {
+    white-space: pre-line;
+    font-weight: bold;
+}
+
+.emoji {
+    float: right;
+}
+
+@media (max-width: 768px) {
+    .planos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planos .box {
+        margin: 5px auto;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1900px) {
+    .planos {
+        justify-content: center;
+    }
+}
+
+/* Fim da tabela de planos */
+
+/* Início dos benefícios */
+.bottomsection {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    padding: 5px;
+    border-radius: 8px;
+    color: rgb(197, 195, 195);
+}
+
+.title-box {
+    width: 200%;
+    color: white;
+}
+
+.left-box2 {
+    flex: 0.8;
+}
+
+.right-box2 {
+    flex: 1;
+    text-align: left;
+    font-size: 16.4px;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+/* Fim dos benefícios */
+
+/* Início das funcionalidades */
+
+.card-slider {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.card-container {
+	display: flex;
+	width: 600%;
+	height: 100%;
+	transition: transform 0.3s ease-in-out;
+}
+
+.card {
+	flex: 0 0 16.6667%;
+	height: 100%;
+	background-color: #17181a;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	cursor: pointer;
+	position: relative;
+}
+
+.card img {
+	max-width: 40%;
+	max-height: 60%;
+	object-fit: cover;
+	margin-bottom: 10px;
+	margin-top: 50px;
+	border-radius: 30px;
+}
+
+
+.card-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 24px;
+	color: #fff;
+}
+
+.card-arrow-left {
+	left: 20px;
+}
+
+.card-arrow-right {
+	right: 20px;
+}
+
+.card-content {
+	color: #fff;
+	text-decoration: underline #282a2c;
+	margin: 30px;
+	font-size: larger;
+}
+
+/* Fim das funcionalidades */
+
+/* Início do review */
+.reviewsection {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    padding: 5px;
+    border-radius: 8px;
+    justify-content: space-around;
+}
+
+.left-review-box {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d3d3d3a4;
+    border-radius: 35px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.txtbox {
+    text-align: center;
+    width: 380px;
+    word-break: break-word;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.right-review-box {
+    flex: 1;
+    text-align: left;
+    font-size: 36px;
+    word-break: break-word;
+    max-width: 500px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+}
+
+.form-box input,
+.form-box textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.form-box textarea {
+    height: 100px;
+}
+
+/* Fim do review */
+
+/* Início do footer */
+.footer {
+    background-color: #222020;
+    padding: 10px;
+    color: white;
+  }
+  
+  .footersection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .left-footer-box,
+  .center-footer-box,
+  .right-footer-box {
+    flex: 1;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .left-footer-box h3,
+  .center-footer-box h3,
+  .right-footer-box h3 {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .companies-location {
+    text-align: center;
+  }
+  
+  .center-footer-box h3 {
+    text-align: left;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+  }
+  
+  .social-media li {
+    margin-right: 10px;
+  }
+  
+  .partner-companies {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+  }
+  
+  .partner-companies li {
+    margin-bottom: 5px;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .icon {
+    margin-left: 5px;
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    font-size: 26px;
+    color: #fff;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: 0.25s;
+    
+  }
+  
+  .icon:hover {
+    outline-offset: 4px;
+  }
+  
+  .icon i {
+    margin: auto;
+  }
+  
+  .icon:hover i {
+    animation: shake 0.25s;
+  }
+  
+  .icon--instagram:hover {
+    background-image: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    outline-color: #a02d76;
+  }
+  
+  .icon--twitter:hover {
+    background-color: #1da1f2;
+    outline-color: #1da1f2;
+  }
+  
+  .icon--linkedin:hover {
+    background-color: #0077b5;
+    outline-color: #0077b5;
+  }
+  
+  .icon--github:hover {
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
+  }
+  
+  @keyframes shake {
+    10% {
+      transform: rotate(15deg);
+    }
+    20% {
+      transform: rotate(-15deg);
+    }
+    30% {
+      transform: rotate(15deg);
+    }
+    40% {
+      transform: rotate(-15deg);
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .footersection {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-footer-box,
+    .center-footer-box,
+    .right-footer-box {
+      width: 100%;
+    }
+  
+    .center-footer-box h3 {
+      text-align: center;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .icons {
+      justify-content: center;
+      margin-left: 0;
+    }
+  }
+/* Fim do footer */
